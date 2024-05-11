@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import path from "path";
-import mainRoute from "./routes/mainRoute.js";
+import mainRoute from "./routes/mainRoutes.js";
 const app = express();
 
 dotenv.config({ path: path.resolve("../.env") });

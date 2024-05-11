@@ -1,6 +1,7 @@
 import USER from "../db/db.js";
-const userExist = async (req, res, next) => {
-  const { email } = req.body.email;
+
+const checkUserExist = async (req, res, next) => {
+  const { email } = req.body;
   const isExist = await USER.findOne({ email });
   console.log("isExist:", isExist);
   if (isExist) {
@@ -12,4 +13,4 @@ const userExist = async (req, res, next) => {
   next();
 };
 
-export default userExist;
+export default checkUserExist;
