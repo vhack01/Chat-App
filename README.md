@@ -9,11 +9,11 @@
 
 ## Step and Run
 
-    - **Frontend**
+    - ** Frontend **
         - npm install
         - npm run dev
 
-    - **backend**
+    - ** backend **
         - npm install
         - npm run dev
 
@@ -24,6 +24,10 @@
         2. Socket.io -> chat system
         3. Nodemon -> Rerun server
         4. Cors -> Allow connection with remote server
+        5. ZOD -> It is a TypeScript-first schema declaration and validation library
+        5. DOTENV ->
+        6. MONGOOSE ->
+        7.
 
     - Client
         1. Socket.io-client
