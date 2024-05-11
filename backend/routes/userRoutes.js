@@ -11,10 +11,14 @@ dotenv.config({ path: path.resolve("../.env") });
 
 router.post("/signup", checkUserExist, validateSignup, async (req, res) => {
   const signupData = req.body;
-  const isCreated = await USER.create(signupData);
-  console.log("isCreated", isCreated);
-
-  if (!isCreated) {
+  try {
+    const isCreated = await USER.create(signupData);
+    if (!isCreated) {
+      return res.status(500).json({
+        message: "Internal Server Error",
+      });
+    }
+  } catch (err) {
     return res.status(500).json({
       message: "Internal Server Error",
     });
